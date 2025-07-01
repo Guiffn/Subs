@@ -1,0 +1,33 @@
+@url_base = http://localhost:5137/api/lacamento
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtIiwiZXhwIjoxNzUxMzMwOTI5fQ.9qVTiCj4tdYNH4AWFM11qyBnEwB5TOeZEc_pA_O6noI
+### Cadastrar Lançamento
+POST {{url_base}}/cadastrar
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "valor" : 1000,
+    "categoriaId" : 2
+}
+
+### Listar Lançamento
+GET {{url_base}}/listar
+Authorization: Bearer {{token}}
+
+### Listar Lançameto por id
+GET {{url_base}}/buscarlancamentoporid/7
+Authorization: Bearer {{token}}
+
+### Deletar lacamento
+DELETE {{url_base}}/deletar/6
+Authorization: Bearer {{token}}
+
+### Alterar Alterar
+PUT {{url_base}}/alterar/7
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "valor": 1700,
+    "categoriaId": 3
+}'

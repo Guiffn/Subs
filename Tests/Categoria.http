@@ -1,0 +1,19 @@
+@url_base = http://localhost:5137/api/categoria
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtIiwiZXhwIjoxNzUxMzI2ODQ2fQ.yz0--qVCHe7IfyOF3a92t4iCxTvKJpMuiNa7GysHzbU
+### Cadastrar categoria
+POST {{url_base}}/cadastrar
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "tipo" : "Salario",
+    "descricao":"Salario obtido no mês"
+}
+
+### Listar categorias
+GET {{url_base}}/listar
+Authorization: Bearer {{token}}
+
+### Deletar categorias
+DELETE {{url_base}}/deletar/1
+Authorization: Bearer {{token}}
